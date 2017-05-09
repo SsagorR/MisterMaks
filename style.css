@@ -1,0 +1,98 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+video {
+	z-index: -100;
+	position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.exchange {
+	list-style-type: none;
+	z-index: 10;
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	padding:0;
+	margin-top: 4em;
+}
+
+.exchange li {
+	font-size: 3em;
+}
+
+.euro, .pound, .rubl {
+	display: none;
+}
+
+.dollar-icon, .euro-icon, .pound-icon, .rubl-icon {
+	text-shadow: 0 0 5px white;
+	transition: color .2s ease;
+	margin: 0 0.5em 0 0.5em;
+} 
+
+.dollar-icon:hover, .euro-icon:hover, .pound-icon:hover, .rubl-icon:hover {
+	color: rgb(230, 230, 230);
+}
+
+.dollar, .euro, .pound, .rubl {
+	width: 100%;
+	justify-content: space-around;
+	text-align: center;
+	flex-wrap: wrap;
+	margin-top: 10em;
+}
+
+.dollar {
+	display: inline-flex;
+}
+
+.clicked {
+	color: rgb(230, 230, 230);
+}
+
+.rate {
+	font-family: Helvetica;
+	font-size: 7em;
+	color: white;
+	text-shadow: 5px 5px 10px black;
+}
+
+.rate-box {
+	color: white;
+	margin: 0 2em 0 2em;
+}
+
+.rate-text {
+	font-size: 1.3em;
+}
+
+.up {
+	color: #C9DF8A;
+}
+
+.down {
+	color: #F17333;
+}
+
+@media screen and (max-width: 767px) {
+	.dollar, .euro, .pound, .rubl {
+		margin-top: 0;
+	}
+
+	.exchange {
+		margin-top: 1em;
+	}
+}
